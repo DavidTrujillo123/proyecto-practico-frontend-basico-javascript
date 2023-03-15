@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root
+        {
+            --white: #FFFFFF;
+            --black: #000000;
+            --very-light-pink: #c7c7c7;
+            --text-input-field: #f7f7f7;
+            --hospital-green: #ACD9B2;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+        }
+        a{
+            text-decoration: none;
+        }
+        ul{
+            padding: 0;
+            list-style: none;
+        }
+        body{
+            font-family: 'Quicksand', sans-serif;
+            margin: 0;
+        }
+        .mobile-menu{
+            padding: 24px;
+        }
+        .mobile-menu a{
+            color: var(--black);
+            font-weight: bold;
+        }
+        .mobile-menu ul{
+            margin: 24px 0 0 0;
+        }
+        .mobile-menu li{
+            margin-bottom: 24px;
+        }
+        .mobile-menu ul:nth-child(1){
+            border-bottom: 1px solid var(--very-light-pink);
+        }
+        .mobile-menu .email{
+            font-size: var(--sm);
+            font-weight: 300;
+            color: var(--very-light-pink);
+        }
+        .mobile-menu .sign-out{
+            color: var(--hospital-green);
+            font-size: var(--sm);
+        }
+        .mobile-menu ul:nth-child(2){
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+        }
+        .mobile-menu ul:nth-child(3){
+            margin-bottom: 16px;
+            position: absolute;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="/">CATEGORIES</a></li>
+            <li><a href="">All</a></li>
+            <li><a href="">Clothes</a></li>
+            <li><a href="">Electronics</a></li>
+            <li><a href="">Furnitures</a></li>
+            <li><a href="">Toys</a></li>
+            <li><a href="">Others</a></li>
+        </ul>
+        <ul>
+            <li><a href="">My orders</a></li>
+            <li><a href="">My acount</a></li>
+        </ul>
+        <ul>
+            <li><a href="" class="email">example@example.com</a></li>
+            <li><a href="" class="sign-out">Sign out</a></li>
+        </ul>
+    </div>
+</body>
+</html>
