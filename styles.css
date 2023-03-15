@@ -261,12 +261,12 @@ nav {
 /* Animaciones */
 .animacionOpen{
     transition: all 3s ease;
-    animation: openMenuDesktop 1s linear;
+    animation: openMenuDesktop .5s linear;
     animation-fill-mode: forwards;
 }
 .animacionClose{
     transition: all 3s ease;
-    animation: closeMenuDesktop 1s linear;
+    animation: closeMenuDesktop .5s linear;
     animation-fill-mode: forwards;
 }
 @keyframes openMenuDesktop {
@@ -281,19 +281,8 @@ nav {
     0%{
         height:163px;
     }
-    99%{
-        height: 0px;
-    }
-    to{
-        display: none;
-    }
-}
-@keyframes custom {
-    0%{
-        height: 0px;
-    }
     100%{
-        height: 163px;
+        height: 0px;
     }
 }
 @media (max-width: 640px) {

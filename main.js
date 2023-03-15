@@ -13,7 +13,7 @@ function toggleDesktopMenu(){
         //Cuando termine la animacion añade la clase inactive
         setTimeout(() => {
            desktopMenu.classList.add('inactive'); 
-        }, 985);
+        }, 500);
     }
     else{
         //Como ya sabemos que es menu esta cerrado por la
@@ -25,7 +25,7 @@ function toggleDesktopMenu(){
     desktopMenu.classList.toggle('animacionOpen');
     desktopMenu.classList.toggle('animacionClose');
 }
-function toggleMovileMenu(){
+function toggleMobileMenu(){
     let isCardAsideOpen = !aside.classList.contains('inactive');
     if(isCardAsideOpen){
         aside.classList.add('inactive');
@@ -41,5 +41,5 @@ function toggleCardAside(){
 }
 
 menuEmail.addEventListener('click', toggleDesktopMenu);
-hamburgerIcon.addEventListener('click', toggleMovileMenu);
+hamburgerIcon.addEventListener('click', toggleMobileMenu);
 menuCardIcon.addEventListener('click', toggleCardAside);
