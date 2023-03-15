@@ -12,11 +12,11 @@
 body {
     font-family: 'Quicksand', sans-serif;
     margin: 0;
+    box-sizing: border-box;
 }
 .inactive{
     display: none;
 }
-
 /* Navbar (general) */
 nav {
     display: flex;
@@ -101,6 +101,7 @@ nav {
     border: 1px solid var(--very-light-pink);
     border-radius: 6px;
     padding: 20px 20px 0 20px;
+    z-index: 2;
 }
 .desktop-menu ul {
     list-style: none;
@@ -131,8 +132,9 @@ nav {
 /* Menu mobile */
 .mobile-menu{
     padding: 24px;
+    background-color: var(--white);
     position: absolute;
-    top: 60px;
+    top: 61px;
     height: 80vh;
 }
 .mobile-menu a{
@@ -172,15 +174,100 @@ nav {
     bottom: 0;
 }
 
+/* Aside (product detail y carrito) */
+.product-detail{
+    box-sizing: border-box;
+    background-color: var(--white);
+    width: 350px;
+    padding: 0 24px;
+    position: absolute;
+    right: 0;
+}
+.title{
+    font-size: var(--lg);
+    font-weight: bold;
+}
+.title-container{
+    display: flex;
+
+}
+.title-container img{
+    display: flex;  
+    transform: rotate(180deg);
+    margin-right: 14px; 
+}
+.my-order-content{
+    display: flex;
+    flex-direction: column;
+}
+.order{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 16px;
+    align-items: center;
+    background-color: var(--text-input-field);
+    margin-bottom: 24px;
+    border-radius: 8px;
+    padding: 0 24px ;
+}
+.order p:nth-child(1){
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+}
+.order p span:nth-child(1){
+    font-size: var(--md);
+}
+.order p:nth-child(2){
+    text-align: end;
+    font-weight: bold;
+}
+.shopping-card{
+    display: grid;
+    grid-template-columns: auto 1fr auto auto auto;
+    gap: 16px;
+    margin-bottom: 24px;
+    align-items: center;
+}
+.shopping-card p:nth-child(2){
+    color: var(--very-light-pink)
+}
+.shopping-card p:nth-child(3){
+    font-size: var(--md);
+    font-weight: bold;
+}
+.shopping-card figure{
+    margin: 0;
+}
+.shopping-card figure img{
+    object-fit: cover;
+    width: 70px;
+    height: 70px;
+    border-radius: 20px;
+}
+.primary-button{
+    background-color:var(--hospital-green);
+    border-radius: 8px;
+    border: none;
+    color: var(--white);
+    width: 100%;
+    height: 48px;
+    cursor: pointer;
+    font-size: var      (--md);
+    font-weight: bold;
+}
+
 @media (max-width: 640px) {
     .menu {
         display: block;
     }
-
     .navbar-left ul, 
     .navbar-email,
     .desktop-menu {
         display: none;
+    }
+    .product-detail{
+        width: 100%;
     }
 }
 @media (min-width: 640px) {
