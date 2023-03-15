@@ -6,7 +6,24 @@ const menuCardIcon = document.querySelector('.navbar-shopping-cart');
 const aside = document.querySelector('.product-detail');
 
 function toggleDesktopMenu(){
-    desktopMenu.classList.toggle('inactive');
+    let isMenuDesktopOpen = !desktopMenu.classList.contains('inactive');
+    if(isMenuDesktopOpen){
+        // setTimeout() => funcion de javascrit donde al pasar un 
+        //tiempo se ejecuta la función
+        //Cuando termine la animacion añade la clase inactive
+        setTimeout(() => {
+           desktopMenu.classList.add('inactive'); 
+        }, 985);
+    }
+    else{
+        //Como ya sabemos que es menu esta cerrado por la
+        //condicion solo lo removemos la clase inactive
+        desktopMenu.classList.remove('inactive');
+    }
+    //Añade las animaciones de abrir o cerrar, la
+    //clase animationClose debe estar en el html
+    desktopMenu.classList.toggle('animacionOpen');
+    desktopMenu.classList.toggle('animacionClose');
 }
 function toggleMovileMenu(){
     let isCardAsideOpen = !aside.classList.contains('inactive');
