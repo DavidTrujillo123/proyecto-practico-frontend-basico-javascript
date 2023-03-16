@@ -41,7 +41,7 @@ function toggleCardAside(){
     aside.classList.toggle('inactive');
 }
 //arr -> array de productos
-function renderProducts(arr){
+function renderProducts(productList){
     for(product of productList){
         const productCard = document.createElement('div');
         productCard.classList.add('product-card');
