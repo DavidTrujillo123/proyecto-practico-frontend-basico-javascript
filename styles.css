@@ -363,13 +363,13 @@ nav {
     color: var(--very-light-pink);
     font-size: var(--md);
     margin-top: 0px;
-    margin-bottom: 36px;
+    /* margin-bottom: 36px; */
 }
 .product-info p:nth-child(3){
     color: var(--very-light-pink);
     font-size: var(--sm);
     margin-top: 0px;
-    margin-bottom: 36px;
+    /* margin-bottom: 36px; */
 }
 .primary-button{
     background-color: var(--hospital-green);
