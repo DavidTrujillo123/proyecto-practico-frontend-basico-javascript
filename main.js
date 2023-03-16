@@ -60,7 +60,6 @@ function toggleProductsDetails(element){
     secondAside.appendChild(info[0]);
     secondAside.appendChild(info[1]);
     secondAside.appendChild(info[4]);
-    secondAside.appendChild(info[5]);
 }
 function cerrarVentanaHP(){
     secondAside.classList.toggle('inactive');
@@ -116,27 +115,28 @@ function createElement(){
 
     const productInfo = document.createElement('div');
     productInfo.classList.add('product-info');
+
     const Cprice = document.createElement('p');
+    
     const Cname = document.createElement('p');
+
     const description = document.createElement('p');
-    description.innerText = `Lorem ipsum dolor sit amet 
-        consectetur adipisicing elit. 
-        Nobis eum repudiandae quam 
-        inventore laboriosam unde 
-        asperiores ad eaque ratione saepe?`;
-    productInfo.append(Cprice, Cname, description);
+
+    description.innerText = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis eum repudiandae quam inventore laboriosam unde asperiores ad eaque ratione saepe?";
 
     const button = document.createElement('button');
     button.classList.add('primary-button');
     button.classList.add('add-to-cart-button');
+
     const imgButton = document.createElement('img');
     imgButton.setAttribute('src', './iconos/bt_add_to_cart.svg');
+
     button.innerText = "Add to cart";
     button.appendChild(imgButton);
 
+    productInfo.append(Cprice, Cname, description, button);
 
-    info.push(Cimage, circle, Cprice, Cname, productInfo, button);
-    
+    info.push(Cimage, circle, Cprice, Cname, productInfo);
 }
 
 menuEmail.addEventListener('click', toggleDesktopMenu);
