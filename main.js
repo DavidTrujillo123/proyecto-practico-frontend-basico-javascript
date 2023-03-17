@@ -62,13 +62,18 @@ function openProductDetail(element){
 }
 function setProductDetail(elementInfo){
     let img = elementInfo[0];//posicion de la img
-    let price = elementInfo[1];//posicion txt price
-    let name = elementInfo[2];//posicion txt name
+   // let price = elementInfo[1];//posicion txt price
+   // let name = elementInfo[2];//posicion txt name
     
     elementProductDetail[0].setAttribute('src', img);
-    elementProductDetail[1].innerText = price;
-    elementProductDetail[2].innerText = name;
+    // elementProductDetail[1].innerText = price;
+    // elementProductDetail[2].innerText = name;
     
+    let cont = 1;
+    while(cont<elementInfo.length){
+        elementProductDetail[cont] = elementInfo[cont];
+        cont++;
+    }
 }
 //arr -> array de productos
 function renderProducts(arr){
